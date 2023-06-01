@@ -32,6 +32,11 @@ public class App extends Application {
         logoImage1.setFitHeight(512);
         logoImage1.setFitWidth(320);
         Scene scene = new Scene();
+        
+        Button starButton = new Button("Start");
+        starButton.setId("start");
+        starButton.setOnAction(event -> stageUtama.setScene(inputScene()));
+
         return scene;
     }
 }
