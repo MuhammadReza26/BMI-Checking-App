@@ -65,5 +65,11 @@ public class App extends Application {
         Scene scene = new Scene(pane, 320, 512);
         return scene;
 
+        submit.setOnAction(event -> {
+            double berat = Double.parseDouble(textBeratBadan.getText());
+            double tinggi = Double.parseDouble(textTinggi.getText());
+            stageUtama.setScene(mainMenuScene(tinggi, berat));
+
+        });
     }
 }
