@@ -22,8 +22,16 @@ public class App extends Application {
 
     public void start(Stage stageUtama) {
         this.stageUtama = stageUtama;
+        startScene();
         stageUtama.setResizable(false);
         stageUtama.setTitle("Aplikasi BMI Checking");
         stageUtama.show();
+    }
+    private Scene startScene() {
+        ImageView logoImage1 = new ImageView("/Image/logoScene1.png");
+        logoImage1.setFitHeight(512);
+        logoImage1.setFitWidth(320);
+        Scene scene = new Scene();
+        return scene;
     }
 }
