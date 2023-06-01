@@ -45,4 +45,8 @@ public class App extends Application {
         Scene scene = new Scene(pane, 320, 512);
         return scene;
     }
+    private Scene inputScene() {
+        Label label = new Label("BMI Checking ");
+        return scene;
+}
 }
