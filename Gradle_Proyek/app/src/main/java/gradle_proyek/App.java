@@ -27,16 +27,22 @@ public class App extends Application {
         stageUtama.setTitle("Aplikasi BMI Checking");
         stageUtama.show();
     }
+
     private Scene startScene() {
         ImageView logoImage1 = new ImageView("/Image/logoScene1.png");
         logoImage1.setFitHeight(512);
         logoImage1.setFitWidth(320);
-        Scene scene = new Scene();
-        
+
         Button starButton = new Button("Start");
         starButton.setId("start");
         starButton.setOnAction(event -> stageUtama.setScene(inputScene()));
 
+        VBox vbox = new VBox(1000);
+        vbox.setAlignment(Pos.CENTER);
+        vbox.getChildren().add(starButton);
+        StackPane pane = new StackPane(logoImage1, vbox);
+
+        Scene scene = new Scene(pane, 320, 512);
         return scene;
     }
 }
