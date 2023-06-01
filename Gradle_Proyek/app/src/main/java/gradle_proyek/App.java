@@ -75,6 +75,13 @@ public class App extends Application {
         return scene;
     }
 
+    private Scene mainMenuScene(double height, double berat) {
+        BMI bmi = kalkulasi(height, berat);
+        Scene scene = new Scene(null, 320, 512);
+        return scene;
+
+    }
+
     private BMI kalkulasi(double height, double berat) {
         height = height / 100;
         BMI bmi = new BMI();
