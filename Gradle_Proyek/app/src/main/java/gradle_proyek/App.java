@@ -77,6 +77,10 @@ public class App extends Application {
 
     private Scene mainMenuScene(double height, double berat) {
         BMI bmi = kalkulasi(height, berat);
+        Label judul = new Label("Hasil Kalkulasi BMI");
+        Label hasil = new Label(String.format("%.2f", bmi.getBmi()));
+        hasil.setWrapText(true);
+        hasil.setTextAlignment(TextAlignment.CENTER);
         Scene scene = new Scene(null, 320, 512);
         return scene;
 
