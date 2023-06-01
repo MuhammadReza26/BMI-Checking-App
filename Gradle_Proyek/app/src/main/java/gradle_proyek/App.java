@@ -81,6 +81,11 @@ public class App extends Application {
         Label hasil = new Label(String.format("%.2f", bmi.getBmi()));
         hasil.setWrapText(true);
         hasil.setTextAlignment(TextAlignment.CENTER);
+
+        Label result = new Label(bmi.getSaran());
+        result.setWrapText(true);
+        result.setTextAlignment(TextAlignment.CENTER);
+
         Scene scene = new Scene(null, 320, 512);
         return scene;
 
