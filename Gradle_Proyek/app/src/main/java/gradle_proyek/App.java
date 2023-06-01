@@ -54,6 +54,9 @@ public class App extends Application {
         
         Button submit = new Button("Kalkulasi");
 
+        VBox vbox = new VBox(20);
+        vbox.setAlignment(Pos.CENTER);
+        vbox.getChildren().addAll(label, height, textTinggi, lebar, textBeratBadan, submit);
         return scene;
 }
 }
