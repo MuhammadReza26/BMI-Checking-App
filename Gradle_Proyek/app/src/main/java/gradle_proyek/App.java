@@ -86,6 +86,12 @@ public class App extends Application {
         result.setWrapText(true);
         result.setTextAlignment(TextAlignment.CENTER);
 
+        Button btnBack = new Button("Back To Home");
+
+        VBox vbox = new VBox();
+        vbox.getChildren().addAll(judul, hasil, result, btnBack);
+        vbox.setAlignment(Pos.CENTER);
+
         Scene scene = new Scene(null, 320, 512);
         return scene;
 
