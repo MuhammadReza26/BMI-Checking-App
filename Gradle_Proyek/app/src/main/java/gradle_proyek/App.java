@@ -61,7 +61,7 @@ public class App extends Application {
         ImageView imageView = new ImageView("/Image/logoScene3.png");
 
         StackPane pane = new StackPane(imageView, vbox);
-
+        Scene scene = new Scene(pane, 320, 512);
         return scene;
 
 
