@@ -3,6 +3,8 @@
  */
 package gradle_proyek;
 
+import gradle_proyek.Models.BMI;
+import gradle_proyek.helpers.Color;
 import javafx.application.Application;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
@@ -73,4 +75,23 @@ public class App extends Application {
         return scene;
     }
 
+    private BMI kalkulasi(double height, double berat) {
+        height = height / 100;
+        BMI bmi = new BMI();
+        bmi.setBmi(berat / (height * height));
+        if (bmi.getBmi() < 18.5) {
+            bmi.setSaran("Berat badan kurang, disarankan pertahankan pola makan dan konsumsi makanan bernutrisi");
+            bmi.setWarna(Color.Blue);
+        } else if (bmi.getBmi() >= 18.5 && bmi.getBmi() < 25) {
+            bmi.setSaran("Berat badan normal, pertahankan pola makan  ");
+            bmi.setWarna(Color.Green);
+        } else if (bmi.getBmi() >= 25 && bmi.getBmi() < 30) {
+            bmi.setSaran("berat badan berlebih, kurangi makanan tinggi lemak dan gula ");
+            bmi.setWarna(Color.Red);
+        } else {
+            bmi.setSaran("mengalami obesitas, segera konsul kepada dokter untuk penanganan lebih lanjut");
+            bmi.setWarna(Color.Ungu);
+        }
+        return bmi;
+    }
 }
