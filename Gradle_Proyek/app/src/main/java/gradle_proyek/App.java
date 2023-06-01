@@ -92,6 +92,11 @@ public class App extends Application {
         vbox.getChildren().addAll(judul, hasil, result, btnBack);
         vbox.setAlignment(Pos.CENTER);
 
+        ImageView imageView = new ImageView("/Image/logoScene2.png");
+        HBox hbox = new HBox();
+        hbox.setAlignment(Pos.CENTER);
+        hbox.getChildren().addAll(vbox);
+
         Scene scene = new Scene(null, 320, 512);
         return scene;
 
