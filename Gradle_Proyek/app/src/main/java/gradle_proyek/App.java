@@ -45,25 +45,25 @@ public class App extends Application {
         Scene scene = new Scene(pane, 320, 512);
         return scene;
     }
+
     private Scene inputScene() {
         Label label = new Label("BMI Checking ");
         Label height = new Label("Tinggi Badan (Cm)");
         TextField textTinggi = new TextField();
         Label lebar = new Label("Berat Badan (Kg)");
         TextField textBeratBadan = new TextField();
-        
+
         Button submit = new Button("Kalkulasi");
 
         VBox vbox = new VBox(20);
         vbox.setAlignment(Pos.CENTER);
         vbox.getChildren().addAll(label, height, textTinggi, lebar, textBeratBadan, submit);
-        
+
         ImageView imageView = new ImageView("/Image/logoScene3.png");
 
         StackPane pane = new StackPane(imageView, vbox);
         Scene scene = new Scene(pane, 320, 512);
         return scene;
 
-
-}
+    }
 }
