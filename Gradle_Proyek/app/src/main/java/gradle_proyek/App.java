@@ -57,6 +57,11 @@ public class App extends Application {
         VBox vbox = new VBox(20);
         vbox.setAlignment(Pos.CENTER);
         vbox.getChildren().addAll(label, height, textTinggi, lebar, textBeratBadan, submit);
+        
+          ImageView imageView = new ImageView("/Image/logoScene3.png");
+
         return scene;
+
+
 }
 }
