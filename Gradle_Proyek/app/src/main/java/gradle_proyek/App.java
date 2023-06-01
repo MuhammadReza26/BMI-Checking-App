@@ -52,6 +52,8 @@ public class App extends Application {
         Label lebar = new Label("Berat Badan (Kg)");
         TextField textBeratBadan = new TextField();
         
+        Button submit = new Button("Kalkulasi");
+
         return scene;
 }
 }
