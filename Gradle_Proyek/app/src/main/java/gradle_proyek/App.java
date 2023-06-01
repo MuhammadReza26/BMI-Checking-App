@@ -97,7 +97,9 @@ public class App extends Application {
         hbox.setAlignment(Pos.CENTER);
         hbox.getChildren().addAll(vbox);
 
-        Scene scene = new Scene(null, 320, 512);
+        StackPane pane = new StackPane(imageView, hbox);
+
+        Scene scene = new Scene(pane, 320, 512);
         return scene;
 
     }
