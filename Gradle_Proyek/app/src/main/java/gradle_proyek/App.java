@@ -63,7 +63,6 @@ public class App extends Application {
 
         StackPane pane = new StackPane(imageView, vbox);
         Scene scene = new Scene(pane, 320, 512);
-        return scene;
 
         submit.setOnAction(event -> {
             double berat = Double.parseDouble(textBeratBadan.getText());
@@ -71,5 +70,7 @@ public class App extends Application {
             stageUtama.setScene(mainMenuScene(tinggi, berat));
 
         });
+        return scene;
     }
+
 }
