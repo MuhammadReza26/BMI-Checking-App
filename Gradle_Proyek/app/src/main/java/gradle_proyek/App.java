@@ -58,7 +58,9 @@ public class App extends Application {
         vbox.setAlignment(Pos.CENTER);
         vbox.getChildren().addAll(label, height, textTinggi, lebar, textBeratBadan, submit);
         
-          ImageView imageView = new ImageView("/Image/logoScene3.png");
+        ImageView imageView = new ImageView("/Image/logoScene3.png");
+
+        StackPane pane = new StackPane(imageView, vbox);
 
         return scene;
 
