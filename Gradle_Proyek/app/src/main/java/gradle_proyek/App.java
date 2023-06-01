@@ -50,10 +50,17 @@ public class App extends Application {
 
     private Scene inputScene() {
         Label label = new Label("BMI Checking ");
+        label.getStyleClass().add("label");
+
         Label height = new Label("Tinggi Badan (Cm)");
+        height.getStyleClass().add("label");
         TextField textTinggi = new TextField();
+        textTinggi.getStyleClass().add("kolom");
+
         Label lebar = new Label("Berat Badan (Kg)");
+        lebar.getStyleClass().add("label");
         TextField textBeratBadan = new TextField();
+        textBeratBadan.getStyleClass().add("kolom");
 
         Button submit = new Button("Kalkulasi");
 
@@ -62,8 +69,8 @@ public class App extends Application {
         vbox.getChildren().addAll(label, height, textTinggi, lebar, textBeratBadan, submit);
 
         ImageView imageView = new ImageView("/Image/logoScene3.png");
-
         StackPane pane = new StackPane(imageView, vbox);
+
         Scene scene = new Scene(pane, 320, 512);
 
         submit.setOnAction(event -> {
@@ -78,13 +85,16 @@ public class App extends Application {
     private Scene mainMenuScene(double height, double berat) {
         BMI bmi = kalkulasi(height, berat);
         Label judul = new Label("Hasil Kalkulasi BMI");
+
         Label hasil = new Label(String.format("%.2f", bmi.getBmi()));
         hasil.setWrapText(true);
         hasil.setTextAlignment(TextAlignment.CENTER);
+        hasil.getStyleClass().add("newClass");
 
         Label result = new Label(bmi.getSaran());
         result.setWrapText(true);
         result.setTextAlignment(TextAlignment.CENTER);
+        result.getStyleClass().add("newClass");
 
         Button btnBack = new Button("Back To Home");
 
