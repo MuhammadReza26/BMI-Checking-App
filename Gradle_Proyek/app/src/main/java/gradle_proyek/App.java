@@ -47,6 +47,11 @@ public class App extends Application {
     }
     private Scene inputScene() {
         Label label = new Label("BMI Checking ");
+        Label height = new Label("Tinggi Badan (Cm)");
+        TextField textTinggi = new TextField();
+        Label lebar = new Label("Berat Badan (Kg)");
+        TextField textBeratBadan = new TextField();
+        
         return scene;
 }
 }
