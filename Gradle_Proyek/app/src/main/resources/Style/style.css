@@ -1,0 +1,9 @@
+#start {
+    -fx-background-color: black;
+    -fx-text-fill : white;
+    -fx-font-family : "verdana";
+    -fx-font-size : 15px;
+    -fx-max-width : 100px;
+    -fx-padding : 10px;
+    -fx-background-radius : 5px
+}
