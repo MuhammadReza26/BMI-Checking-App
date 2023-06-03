@@ -23,17 +23,20 @@ public class inputScene extends SceneUtama {
         Label height = new Label("Tinggi Badan (Cm)");
         height.getStyleClass().add("label");
         TextField textTinggi = new TextField();
+        textTinggi.setAlignment(Pos.CENTER);
         textTinggi.getStyleClass().add("kolom");
 
         Label lebar = new Label("Berat Badan (Kg)");
         lebar.getStyleClass().add("label");
         TextField textBeratBadan = new TextField();
+        textBeratBadan.setAlignment(Pos.CENTER);
         textBeratBadan.getStyleClass().add("kolom");
 
         Button submit = new Button("Kalkulasi");
+        submit.setId("kalkulasi");
 
-        VBox vbox = new VBox(10);
-        vbox.setAlignment(Pos.CENTER);
+        VBox vbox = new VBox(20);
+        vbox.setAlignment(Pos.BOTTOM_CENTER);
         vbox.getChildren().addAll(label, height, textTinggi, lebar, textBeratBadan, submit);
 
         ImageView imageView = new ImageView("/Image/logoScene2.png");

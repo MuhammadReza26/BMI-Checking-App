@@ -13,7 +13,7 @@ public class App extends Application {
     public void start(Stage stageUtama) {
         this.stageUtama = stageUtama;
         stageUtama.setTitle("Aplikasi BMI Checking");
-
+        stageUtama.setResizable(false);
         stageUtama.setScene(new startScene(stageUtama).getScene());
         stageUtama.show();
     }

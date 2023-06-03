@@ -27,6 +27,7 @@ public class mainMenuScene extends SceneUtama {
     public Scene getScene() {
         BMI bmi = kalkulasi(height, berat);
         Label judul = new Label("Hasil Kalkulasi BMI");
+        judul.setId("judul");
 
         Label hasil = new Label(String.format("%.2f", bmi.getBmi()));
         hasil.setWrapText(true);
@@ -39,16 +40,28 @@ public class mainMenuScene extends SceneUtama {
         result.getStyleClass().add("newClass");
 
         Button btnBack = new Button("Back To Home");
+        btnBack.setId("btnBackToHome");
         btnBack.setOnAction(event -> stageUtama.setScene(new inputScene(stageUtama).getScene()));
 
-        VBox vbox = new VBox();
-        vbox.getChildren().addAll(judul, hasil, result, btnBack);
+        Button btnExit = new Button("Exit");
+        btnExit.setId("btnExit");
+        btnExit.setOnAction(event -> stageUtama.close());
+
+        VBox vbox = new VBox(30);
+        vbox.setMaxHeight(200);
+        vbox.setMaxWidth(200);
+        vbox.getChildren().addAll(judul, hasil, result);
+        vbox.setStyle(" -fx-background-color : " + bmi.getWarna() + ";");
         vbox.setAlignment(Pos.CENTER);
+
+        VBox vbox2 = new VBox(30);
+        vbox2.getChildren().addAll(vbox, btnBack, btnExit);
+        vbox2.setAlignment(Pos.CENTER);
 
         ImageView imageView = new ImageView("/Image/logoScene3.png");
         HBox hbox = new HBox();
         hbox.setAlignment(Pos.CENTER);
-        hbox.getChildren().addAll(vbox);
+        hbox.getChildren().addAll(vbox2);
 
         StackPane pane = new StackPane(imageView, hbox);
 
