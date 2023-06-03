@@ -7,6 +7,11 @@
     -fx-padding : 10px;
     -fx-background-radius : 5px
 }
+#teks {
+    -fx-text-fill:black;
+    -fx-font-family:"verdana";
+    -fx-font-size:10px;
+}
 .label {
     -fx-text-fill:black;
     -fx-font-family:"verdana";

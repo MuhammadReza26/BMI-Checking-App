@@ -2,6 +2,7 @@ package gradle_proyek.Scene;
 
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
@@ -18,12 +19,11 @@ public class startScene extends SceneUtama {
         ImageView logoImage1 = new ImageView("/Image/logoScene1.png");
         logoImage1.setFitHeight(512);
         logoImage1.setFitWidth(320);
-
         Button starButton = new Button("Start");
         starButton.setId("start");
         starButton.setOnAction(event -> stageUtama.setScene(new inputScene(stageUtama).getScene()));
 
-        VBox vbox = new VBox(1000);
+        VBox vbox = new VBox(30);
         vbox.setAlignment(Pos.CENTER);
         vbox.getChildren().add(starButton);
         StackPane pane = new StackPane(logoImage1, vbox);
