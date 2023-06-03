@@ -42,6 +42,12 @@
     -fx-font-family:"verdana";
     -fx-font-size:13px;
 }
+.newClass {
+    -fx-font-family : "verdana";
+    -fx-font-size : 12px;
+    -fx-padding : 10px;
+    -fx-border-radius :10px;
+}
 #btnBackToHome {
     -fx-background-color: black;
     -fx-text-fill : white;
